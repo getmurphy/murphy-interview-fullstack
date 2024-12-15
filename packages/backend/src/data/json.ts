@@ -1,0 +1,31 @@
+import { Debtor } from "../interfaces/debtor";
+
+export const debtors: Debtor[] = [
+  {
+    id: "1",
+    name: "John Doe Inc.",
+    amountOwed: 1000,
+    contact: { email: "john@example.com", phone: "555-1234" },
+    pastInteractions: [
+      {
+        channel: "EMAIL",
+        timestamp: "2024-12-01T10:00:00Z",
+        intent: "NO_RESPONSE",
+      },
+      { channel: "SMS", timestamp: "2024-12-05T14:30:00Z", intent: "NEUTRAL" },
+    ],
+  },
+  {
+    id: "2",
+    name: "Acme Corp.",
+    amountOwed: 500,
+    contact: { email: "contact@acmecorp.com" },
+    pastInteractions: [
+      {
+        channel: "EMAIL",
+        timestamp: "2024-12-03T09:00:00Z",
+        intent: "POSITIVE_RESPONSE",
+      },
+    ],
+  },
+];

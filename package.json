@@ -1,0 +1,14 @@
+{
+  "name": "pair-programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run dev:backend & pnpm run dev:frontend",
+    "dev:backend": "pnpm --filter ./packages/backend run dev",
+    "dev:frontend": "pnpm --filter ./packages/frontend run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
