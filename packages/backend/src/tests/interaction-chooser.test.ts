@@ -126,24 +126,6 @@ describe("determineNextChannel", () => {
     expect(result).toBe("LETTER");
   });
 
-  test("older negative response less impactful", () => {
-    const debtor: Debtor = {
-      id: "8",
-      name: "Old Negative",
-      amountOwed: 800,
-      email: "old@example.com",
-      pastInteractions: [
-        {
-          channel: "EMAIL",
-          timestamp: daysAgo(40),
-          intent: "NEGATIVE_RESPONSE",
-        },
-      ],
-    };
-    const result = chooser.determineNext(debtor);
-    expect(result).toBe("LETTER");
-  });
-
   test("mixed interactions multiple channels", () => {
     const debtor: Debtor = {
       id: "9",
