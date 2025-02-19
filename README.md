@@ -1,5 +1,11 @@
 # murphy-interview
 
+## Setup
+
+- Add Node v.20
+- Install: pnpm install
+- Start server & webapp: pnpm dev
+
 ## TODO's
 
 - Implement debtor backend route GET debtors/:id (packages/backend/src/routes/debtors.ts)

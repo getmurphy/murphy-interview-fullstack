@@ -5,7 +5,8 @@ export const debtors: Debtor[] = [
     id: "1",
     name: "John Doe Inc.",
     amountOwed: 1000,
-    contact: { email: "john@example.com", phone: "555-1234" },
+    email: "john@example.com",
+    phone: "555-1234",
     pastInteractions: [
       {
         channel: "EMAIL",
@@ -19,7 +20,7 @@ export const debtors: Debtor[] = [
     id: "2",
     name: "Acme Corp.",
     amountOwed: 500,
-    contact: { email: "contact@acmecorp.com" },
+    email: "contact@acmecorp.com",
     pastInteractions: [
       {
         channel: "EMAIL",

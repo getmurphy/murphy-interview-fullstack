@@ -7,9 +7,5 @@ export interface Debtor {
   phone?: string;
   email?: string;
   amountOwed: number;
-  contact?: {
-    email: string;
-    phone?: string;
-  };
   pastInteractions: PastInteraction[];
 }
