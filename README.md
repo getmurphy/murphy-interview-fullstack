@@ -20,11 +20,41 @@ This is a simplified monorepo with:
 
 ---
 
+## Setup
+
+### Requirements
+
+- Node.js 20.x
+- `pnpm` (install globally: `npm i -g pnpm`)
+
+---
+
+### Install dependencies
+
+```bash
+pnpm install
+```
+
+---
+
 ## Scenario
 
-Our system manages debtors and helps automate interactions with them.
+Our system helps companies manage their accounts receivable and automate customer interactions for outstanding debts.
 
-You will implement a feature that selects the **next interaction** to perform for a debtor, and exposes it through an API.
+Each debtor in our system has:
+
+- Contact information
+- An outstanding balance
+- A history of previous interactions (emails, calls, letters, etc)
+
+Business goal:
+We want to automatically
+
+For this exercise, you'll implement a features that:
+
+✅ Selects the next best interaction for a given debtor (if any) based on past interactions.
+✅ Exposes this suggestion via an API
+✅ Returns clean, structured data to the frontend
 
 ---
 
@@ -40,6 +70,10 @@ You will implement a feature that selects the **next interaction** to perform fo
 - `GET /api/debtors`  
   → in: `packages/backend/src/routes/debtors.ts`
 
+You are free to structure the backend as you see fit.
+
+You may add new folders such as `controllers`, `usecases`, etc — we are interested in seeing how you think about **separation of concerns** and **clean architecture**.
+
 ---
 
 #### Business logic
@@ -47,14 +81,6 @@ You will implement a feature that selects the **next interaction** to perform fo
 Implement the "next interaction" logic.
 
 You may implement this logic in: /packages/backend/src/services/interaction-chooser.ts
-
-You are free to structure the backend as you see fit.
-
----
-
-#### Architecture
-
-You may add new folders such as `controllers`, `usecases`, etc — we are interested in seeing how you think about **separation of concerns** and **clean architecture**.
 
 ---
 
@@ -82,26 +108,7 @@ Frontend architecture is also up to you — we’d like to see **clean separatio
 
 ## Bonus Questions
 
-Please answer these questions in a file called `TECH_NOTES.md`:
-
 1. How would you decouple the data source from your route handlers?
 2. How would you optimize backend calls if displaying a list of 10,000 debtors?
 3. How would you separate React components from data fetching logic?
 4. How would you extend the interaction chooser logic to support new interaction types in the future?
-
----
-
-## Setup
-
-### Requirements
-
-- Node.js 20.x
-- `pnpm` (install globally: `npm i -g pnpm`)
-
----
-
-### Install dependencies
-
-```bash
-pnpm install
-```
