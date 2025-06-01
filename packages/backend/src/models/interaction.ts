@@ -1,4 +1,4 @@
-// Communication channels we might use
+// Communication channels
 export type CommunicationChannel = "EMAIL" | "SMS" | "PHONE_CALL" | "LETTER";
 
 // Intents detected from previous responses
